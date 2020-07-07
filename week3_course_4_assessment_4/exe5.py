@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul  7 15:58:43 2020
+
+@author: mcsbi
+"""
+"""
+Write code so that the buggy code provided works using a try/except. When the codes does not work in the try, have it append to the list attempt the string “Error”.
+"""
+full_lst = ["ab", 'cde', 'fgh', 'i', 'jkml', 'nop', 'qr', 's', 'tv', 'wxy', 'z']
+
+attempt = []
+
+for elem in full_lst:
+    try:
+        attempt.append(elem[1])
+    except:
+        attempt.append("Error")
+
+print(attempt)
