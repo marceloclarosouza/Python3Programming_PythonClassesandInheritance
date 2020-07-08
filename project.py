@@ -164,4 +164,31 @@ class WOFHumanPlayer(WOFPlayer):
         print(str)
 
 # Write the WOFComputerPlayer class definition (part C) here
-#class WOFComputerPlayer(WOFPlayer):
+
+class WOFComputerPlayer(WOFPlayer):
+    SORTED_FREQUENCIES = 'ZQXJKVBPYGFWMUCLDRHSNIOATE'
+    prizeMoney = 0
+    def __init__(self, name, difficulty):
+        self.name = name
+        self.difficulty = difficulty
+        self.prizeMoney = 0
+        self.prizes = []
+    
+    def smartCoinFlip(self):
+        if random.randint(1, 10) > self.difficulty:
+            return True
+        else:
+            return False
+        
+     def getPossibleLetters(self, guessed):
+        list = []
+        if self.prizeMoney >= VOWEL_COST:
+            for l in LETTERS:
+                list.append(l)
+        else:
+            for l in LETTERS:
+                if l not in VOWELS:
+                    list.append(l)
+        return list
+    
+    
