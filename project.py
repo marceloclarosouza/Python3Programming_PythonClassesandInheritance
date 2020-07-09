@@ -25,8 +25,8 @@ class WOFPlayer():
 # Write the WOFHumanPlayer class definition (part B) here
 
 class WOFHumanPlayer(WOFPlayer):            
-    def getMove(category,obscuredPrase,guessed):
-        stri = input(self.name + "has $"+ str(self.prizeMoney)+ "/n" + ", Category:" + category + "/n" + ", Phrases:" + "/n" + obscuredPhrase + "/n" + ", Guessed:" + guessed + "/n" + "Guess a letter, phrase, or type 'exit' or 'pass':") 
+    def getMove(self, category,obscuredPrase,guessed):
+        stri = input(self.name + "has $"+ str(self.prizeMoney)+ "/n" + ", Category:" + category + "/n" + ", Phrases:" + "/n" + obscuredPrase + "/n" + ", Guessed:" + guessed + "/n" + "Guess a letter, phrase, or type 'exit' or 'pass':") 
         print(stri)
 
 # Write the WOFComputerPlayer class definition (part C) here
